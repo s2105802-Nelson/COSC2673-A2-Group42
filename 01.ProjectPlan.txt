@@ -1,0 +1,49 @@
+EDA
+---
+
+1) EDA on image files
+2) EDA on Main Label files
+3) EDA on the Extra Label files
+4) Join of Image to Label data and EDA on the Join
+
+Define the Problem
+---
+
+1) Clarify the problems - Binary Classification of Cancerous + Multi classification of Cancer type
+2) Define our objective function and evaluation metric - Confusion Matrix + pick a good performance measure (accuracy, precision, specificity or other)
+3) Deine a Hypothesis for each problem
+
+
+Baseline Model
+---
+
+0) Run and understand the Week09_QandA notebook on tensorflow (face orientation problem)
+1) Pick an algorithm / library  - Research, what is the most basic method for image classification?
+2) Using just the image data, no hyperparameter tuning, no feature transformation stuff
+3) Train Test Validation Split
+4) Train a baseline model and get a result according to evaluation metric
+
+
+Data Preparation / Feature Selection
+---
+
+1) Feature Selection: consider whether we combine image data with other feature data from label files
+2) Transformation like power, log etc
+3) Scaling (MinMax or Standard Scaling)
+4) Encoding for categoricals (On hot encoding etc)
+
+
+More Modelling
+---
+
+1) More advanced algorithms - Deep Learning and Neural Networks
+2) Hyperparameter tuning
+3) Pruning things - dropout
+
+
+Review and Research
+---
+
+1) Review Lecture content and ensure we have covered all topics, including evalutation methods, determining overfitting etc
+2) Have to research existing work on the topic and compare our results to existing work
+3) Review this plan and figure out if we need to do more things 
