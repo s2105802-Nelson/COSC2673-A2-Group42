@@ -8,8 +8,10 @@ from torchvision.io import read_image
 
 # Custom DataSet class for loading the image dataset using PyTorch NNs for the isCancerous modelling
 class CancerBinaryDataset(Dataset):
-    def __init__(self, dfImages, img_dir, transform=None, target_transform=None): 
-        # Keep a reference to the data set
+    def __init__(self, isGoogleColab, dfImages, img_dir, transform=None, target_transform=None): 
+        # Store a flag on the deployment env
+        self.is_google_colab = isGoogleColab
+        # Keep a reference to the data set        
         self.df_images = dfImages
         # Set the labels to the the target column in the dataset
         self.img_labels = dfImages["isCancerous"]
@@ -24,7 +26,15 @@ class CancerBinaryDataset(Dataset):
     
     def __getitem__(self, idx):
         # Load the image using the image directory and then from the ImageName col in the dataframe
-        img_path = os.path.join(self.img_dir, self.df_images.loc[idx, "ImageName"])
+        img_name = self.df_images.loc[idx, "ImageName"]
+        img_name = img_name.replace("\\", "/")
+
+        # if it's google colab, then strip out the leading "./"
+        if self.is_google_colab:
+            if img_name.startswith("./"):
+                img_name = img_name[2:]            
+
+        img_path = os.path.join(self.img_dir, img_name)
         image = read_image(img_path)
 
         # Set the label
@@ -42,7 +52,9 @@ class CancerBinaryDataset(Dataset):
 
 # Custom DataSet class for loading the image dataset using PyTorch NNs for the CellType modelling
 class CancerCellTypeDataset(Dataset):
-    def __init__(self, dfImages, img_dir, transform=None, target_transform=None): 
+    def __init__(self, isGoogleColab, dfImages, img_dir, transform=None, target_transform=None): 
+        # Store a flag on the deployment env
+        self.is_google_colab = isGoogleColab        
         # Keep a reference to the data set
         self.df_images = dfImages
         # Set the labels to the the target column in the dataset
@@ -58,7 +70,15 @@ class CancerCellTypeDataset(Dataset):
     
     def __getitem__(self, idx):
         # Load the image using the image directory and then from the ImageName col in the dataframe
-        img_path = os.path.join(self.img_dir, self.df_images.loc[idx, "ImageName"])
+        img_name = self.df_images.loc[idx, "ImageName"]
+        img_name = img_name.replace("\\", "/")
+
+        # if it's google colab, then strip out the leading "./"
+        if self.is_google_colab:
+            if img_name.startswith("./"):
+                img_name = img_name[2:]            
+
+        img_path = os.path.join(self.img_dir, img_name)
         image = read_image(img_path)
 
         # Set the label
