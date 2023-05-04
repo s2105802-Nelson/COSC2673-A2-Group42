@@ -4,7 +4,12 @@
 import os
 from torch.utils.data import Dataset
 from torchvision.io import read_image
+import torch
 
+def getTrainMeanAndStdTensors():
+    train_mean = torch.tensor([0.8035, 0.5909, 0.7640])
+    train_std = torch.tensor([0.1246, 0.1947, 0.1714])
+    return train_mean, train_std
 
 # Custom DataSet class for loading the image dataset using PyTorch NNs for the isCancerous modelling
 class CancerBinaryDataset(Dataset):
