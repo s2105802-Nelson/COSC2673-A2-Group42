@@ -1,3 +1,54 @@
+9/5 - Due 15/5
+-----------
+
+Base model generated with results
+Possible next steps for a model
+	- Improve model by complexity
+		- More hidden layers
+		- More neurons per layer
+		- More data
+	- Reduce overfitting with Regularization
+		- L2
+		- Dropout
+		- Early Stopping
+	
+Advanced next Steps
+	- Different models / Algorithms
+		- CNNs with different Architectures
+		- Fully Connected vs Sparse Connected?
+		- Deep Learning
+		- Other NN types - ANNs, RNNs
+	- Semi Supervised learning
+		- Use the Extra data for Is Cancerous (not SS)
+		- Use the Extra data for Cell Type
+	- More Data
+		- Apply transformation (likely rotation) to images to expand data set
+		
+		
+KH
+--
+Tensorflow model improvement
+	- Get the results for comparison
+Possible:
+	- Experiment with more layers and neurons
+	- Try L2 or Dropout or both for regularization
+		
+Nelson
+------
+PyT base model make the same as KH 
+	- Do a 2 Layer experiment
+	- Predict on Test data and use that for results and comparison
+CNN Model improvement
+	- Experiment with CNN layers - Convolutions or NN layers?
+	- Regularization, Dropout
+Semi-supervised learning
+	
+		
+	
+
+
+-----------
+
 EDA
 ---
 
