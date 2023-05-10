@@ -36,12 +36,17 @@ Possible:
 Nelson
 ------
 PyT base model make the same as KH 
-	- Do a 2 Layer experiment
-	- Predict on Test data and use that for results and comparison
+	- Do a 2 Layer experiment - done
+	- Predict on Test data and use that for results and comparison - done
 CNN Model improvement
 	- Experiment with CNN layers - Convolutions or NN layers?
+		- 2 layer
+		- 3 layer
 	- Regularization, Dropout
 Semi-supervised learning
+	- Pick best CNN and run Binary Model
+	- Implement SS on the Multi model
+		- Recalculate Means with extra data?
 	
 		
 	
