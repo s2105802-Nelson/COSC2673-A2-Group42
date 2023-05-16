@@ -7,13 +7,22 @@
 
 The full repository of code files for this project can be found here: https://github.com/s2105802-Nelson/COSC2673-A2-Group42
 
+* Note: PyTorch models make use of custom data files, images_main.csv and images_extra.csv, which are included
+
+
+Running Environment
+--------------
+Before running the PyTorch based Model files, please note the isGoogleColab variable near the top of the file, which by default is set to False
+	If this file is being run locally, the scripts assume that the "Image_classification_data" folder exists in the same directory as the notebook
+	If this file is to be run on Google Colab, set this variable to True. The script assumes there is a directory in the "My Drive" of your Google Drive account 
+		called "COSC2673" and that both the notebook and the "Image_classification_data" folder are in this folder.
+For testing the scripts, the variable useFullData in the PyTorch model files can be set to False. This will train the models on a subset of 1000 records only.
+
 
 Baseline and Best Model Results:
 --------------
 For the Baseline Model with PyTorch, see the file: 05c.PyTorchBaseline.ipynb
 For the Best performing models, CNN model with PyTorch, see the file 28.PyTorchCNN07.ipynb
-
-* Note: PyTorch models make use of custom data files, images_main.csv and images_extra.csv, which are included
 
 
 Other Model Results:
