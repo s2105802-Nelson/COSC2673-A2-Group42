@@ -2,16 +2,17 @@
 <a name="readme-top"></a>
 
 <div align="center">
-<h3 align="center">Image Classification of Cells for Cancerous Cell Type</h3>
-
+  <h2 align="center">Image Classification of Cells for Cancerous Cell Type</h2>
   <p align="center">
-    With PyTorch and Tensorflow based Neural Networks and Convolutional Neural Networks (CNNs)
-    <br />
+    <strong>With PyTorch and Tensorflow based Neural Networks and Convolutional Neural Networks (CNNs)</strong>
+  </p>  
+  <p align="center">
+    <em>ReadMe is a Work in Progress</em>
   </p>
 </div>
 
 
-<em>ReadMe is a Work in Progress</em>
+
 
 <!-- TABLE OF CONTENTS -->
 <details>
